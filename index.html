@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+
+<body class="overflow-hidden">
+
+    <main class="justify-center items-center">
+        <div class="background"></div>
+        <h1 class="text-center">smir-ant</h1>
+        <p class="mb-5">Не фанат js, профессор кринжологии</p>
+        <div class="menu">           
+            <a id="email"><span class="text-lg sm:text-2xl font-mono ">i@smir-ant.ru</span><br><sub>(скопировать почту)</sub></a>
+            <script>
+                // ну блин, ладно, немножечко js есть, признаю 🙃
+                document.getElementById('email').addEventListener('click', function() {
+                    navigator.clipboard.writeText('i@smir-ant.ru')
+                });
+            </script>
+            <a class="text-2xl sm:text-3xl row-span-2" href="portfolio.html">ПОРТФОЛИО</a>
+            <a href="questions.html">НАПИСАТЬ АНОНИМНО<br><sub>(и остаться без ответа)</sub></a>
+            <div class="links flex col-span-2 justify-between justify-items-center align-middle">
+                <a href="https://github.com/smir-ant"><img src="assets/links/github.png"><br>Github</a>
+                <a href="https://profi.ru/profile/SmirnovAV628"><img src="assets/links/profi.png"><br>Profi.ru</a>
+                <a href="https://www.codewars.com/users/smir-ant"><img src="assets/links/codewars.png"><br>Codewars</a>
+                <a href="https://leetcode.com/u/smir-ant/"><img src="assets/links/leetcode.png"><br>Leetcode</a>
+            </div> 
+        </div>
+    </main>
+</body>
+
+</html>

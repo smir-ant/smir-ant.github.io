@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анонимное сообщение</title>
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+
+<body class="overflow-hidden">
+    <a href="index.html" class="home">
+        <img src="assets/nav_home.svg" class="w-12 invert dark:invert-0">
+    </a>
+    <main class="h-full flex justify-center items-center">
+        <div class="background"> </div>
+    
+        <!--  
+        Всех любопытствующих приветствую. Да, сообщения и правда анонимные)
+        Если вдруг тоже захочется подобное реализовать или просто хочешь понять механизм, то вот инструкция как на статической страничке намутить отправление без сервера: https://www.codeproject.com/Articles/1186349/Send-Email-from-a-Static-HTML 
+        -->
+        <form class="w-3/5" action="https://script.google.com/macros/s/AKfycbz_zknQjPR-5N3QtrH0JHhYdhiqEXpun3EErT5sQp7War5LAUVdaLunGAL4xjL5q2U9/exec" method="post">
+            <textarea class="w-full" name="message" placeholder="Текст сообщения" rows="5"></textarea>
+            <input type="submit" value="Отправить" class="block m-auto">
+        </form>
+    </main>
+</body>
+
+</html>
