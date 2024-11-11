@@ -4,35 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
-    <link rel="stylesheet" href="css/output.css">
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <title>smir-ant</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* чтобы dark reader не перекрашивал черный в серый 🤷 */
+        html {
+            background-color: var(--color-bg);
+        }
+        
+        body {
+            box-sizing: border-box;
+            margin: 0 30px;
+            font-family: monospace;
+            font-size: 16px;
+            color: var(--color-fg);
+            line-height: 1.15;
+        }
+
+        a, a:visited {
+            color: var(--color-link);
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2:first-of-type {
+            margin-top: 30px;
+        }
+
+        li {
+            padding: 5px;
+        }
+
+        @media(prefers-color-scheme:light) {
+            :root {
+                --color-bg: #fff;
+                --color-fg: #000;
+                --color-link: #8a8aef;
+            }
+        }
+
+        @media(prefers-color-scheme:dark) {
+            :root {
+                --color-bg: #000;
+                --color-fg: #fff;
+                --color-link: #9898fc;
+            }
+        }
+    </style>
 </head>
 
-<body class="overflow-hidden">
+<body>
+    <h1>smir-ant</h1>
+    <p>Hey, I'm Anton. I like to make things.</p>
+    <p>Work with golang and python, have a liking for rust, hate node :)</p>
 
-    <main class="justify-center items-center">
-        <div class="background"></div>
-        <h1 class="text-center">smir-ant</h1>
-        <p class="mb-5">Не фанат js, профессор кринжологии</p>
-        <div class="menu">           
-            <a id="email"><span class="text-lg sm:text-2xl font-mono ">i@smir-ant.ru</span><br><sub>(скопировать почту)</sub></a>
-            <script>
-                // ну блин, ладно, немножечко js есть, признаю 🙃
-                document.getElementById('email').addEventListener('click', function() {
-                    navigator.clipboard.writeText('i@smir-ant.ru')
-                });
-            </script>
-            <a class="text-2xl sm:text-3xl row-span-2" href="portfolio.html">ПОРТФОЛИО</a>
-            <a href="questions.html">НАПИСАТЬ АНОНИМНО<br><sub>(и остаться без ответа)</sub></a>
-            <div class="links flex col-span-2 justify-between justify-items-center align-middle">
-                <a href="https://github.com/smir-ant"><img src="assets/links/github.png"><br>Github</a>
-                <a href="https://github.com/smir-ant/reviews/issues"><img src="assets/links/reviews.svg" style="border-radius: 0;"><br>Отзывы</a>
-                <a href="https://www.codewars.com/users/smir-ant"><img src="assets/links/codewars.png"><br>Codewars</a>
-                <a href="https://leetcode.com/u/smir-ant/"><img src="assets/links/leetcode.png"><br>Leetcode</a>
-            </div> 
-        </div>
-    </main>
+    <h2>My Profiles</h2>
+    <ul>
+        <li><a href="https://github.com/smir-ant">Github</a></li>
+        <li><a href="mailto:i@smir-ant.ru">Email</a></li>
+        <li><a href="https://www.codewars.com/users/smir-ant">Codewars</a></li>
+    </ul>
+
+    <h2>My Creations</h2>
+    <ul>
+        <li><a href="https://github.com/smir-ant/simpleWebCodeEditor">7.5kB webCodeEditor</a></li>
+        <li><a href="https://github.com/smir-ant/reviews/issues">reviews via gh-issues</a></li>
+        <li><a href="https://github.com/smir-ant/wasm_parser?tab=readme-ov-file">gh-page wasm parser + gh-action build</a></li>
+    </ul>
+
+    <!-- inspired by https://albinodrought.com/ -->
 </body>
 
 </html>
