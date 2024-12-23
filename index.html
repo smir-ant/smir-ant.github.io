@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>smir-ant</title>
+    <meta name="description" content="Личный сайт разработчика Смирнов Антон. Портфолио smir-ant. Как связаться и контакты.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://smir-ant.github.io/">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <style>
         /* чтобы dark reader не перекрашивал черный в серый, meh */
@@ -14,11 +17,14 @@
         
         body {
             box-sizing: border-box;
-            margin: 0 30px;
             font-family: monospace;
             font-size: 16px;
             color: var(--color-fg);
-            line-height: 1.15;
+        }
+
+        main {
+            width: fit-content;
+            margin: 100px auto;
         }
 
         a, a:visited {
@@ -27,56 +33,81 @@
 
         h1 {
             font-size: 2rem;
+            text-align: center;
+            & span {
+                white-space: nowrap;
+            }
         }
 
-        h2:first-of-type {
-            margin-top: 30px;
+        ul {
+            margin: 5px 0;
+            & li {
+                padding: 5px;
+            }
         }
 
-        li {
-            padding: 5px;
+        .green {
+            color: #57C038;
+        }
+
+        .grey {
+            color: #9E9E9E;
+        }
+
+        code {
+            background-color: var(--color-codeBg);
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: block;
         }
 
         @media(prefers-color-scheme:light) {
             :root {
-                --color-bg: #fff;
-                --color-fg: #000;
-                --color-link: #8a8aef;
+                --color-bg: #fdfdfd;
+                --color-fg: #222;
+                --color-link: #6c95db;
+                --color-codeBg: #ededed;
+
             }
         }
 
         @media(prefers-color-scheme:dark) {
             :root {
-                --color-bg: #000;
-                --color-fg: #fff;
-                --color-link: #9898fc;
+                --color-bg: #181a1b;
+                --color-fg: #eee;
+                --color-link: #85b0fb;
+                --color-codeBg: #444;
             }
         }
     </style>
 </head>
 
 <body>
-    <h1>smir-ant</h1>
-    <p>Hey, I'm Anton. I like to make things.</p>
-    <p>Work with golang and python, have a liking for rust and go, hate node :)</p>
+    <main>
+        <h1><span>Smirnov Anton</span> <span>(smir-ant)</span></h1>
+        <p style="text-align: center;">RU | UTC+7</p>
 
-    <h2>My Profiles</h2>
-    <ul>
-        <li><a href="https://github.com/smir-ant">Github</a></li>
-        <li><a href="mailto:i@smir-ant.ru">Email</a></li>
-        <li><a href="https://www.codewars.com/users/smir-ant">Codewars</a></li>
-    </ul>
+        <code><span class="grey">~$</span> <span class="green">whoami</span></code>
+        <ul>
+            <li>Teacher of python, web, rust</li>
+            <li>Middle python dev</li>
+            <li>Lover of light and vanilla</li>
+            <li><a href="https://github.com/smir-ant">Github</a> | <a href="mailto:i@smir-ant.ru">Email</a> | <a href="https://www.codewars.com/users/smir-ant">Codewars</a></li>
+        </ul>
 
-    <h2>My Creations</h2>
-    <ul>
-        <li><a href="https://github.com/smir-ant/spamFilter">filterSpam tgBot</a></li>
-        <li><a href="https://smir-ant.github.io/PgEx/index.html">interactive PostgreSQL trainer (alpha)</a></li>
-        <li><a href="https://github.com/stars/smir-ant/lists/%F0%9D%95%8E%F0%9D%95%96%F0%9D%95%93-%E2%84%82%F0%9D%95%A0%F0%9D%95%9E%F0%9D%95%A1%F0%9D%95%A0%F0%9D%95%9F%F0%9D%95%96%F0%9D%95%9F%F0%9D%95%A5%F0%9D%95%A4">lightweight web components</a></li>
-        <li><a href="https://github.com/smir-ant/reviews/issues">reviews via gh-issues</a></li>
-        <li><a href="https://github.com/smir-ant/wasm_parser?tab=readme-ov-file">gh-page wasm parser + gh-action build</a></li>
-    </ul>
-
-    <!-- inspired by https://albinodrought.com/ -->
+        <br>
+        
+        <code><span class="grey">~/code$</span> <span class="green">ls</span></code>
+        <ul>
+            <li><a href="https://github.com/smir-ant/spamFilter">filterSpam tgBot</a> [golang]</li>
+            <li><a href="https://smir-ant.github.io/PgEx/index.html">interactive PostgreSQL trainer (alpha)</a> [serverless, wasm, js]</li>
+            <li><a href="https://github.com/stars/smir-ant/lists/%F0%9D%95%8E%F0%9D%95%96%F0%9D%95%93-%E2%84%82%F0%9D%95%A0%F0%9D%95%9E%F0%9D%95%A1%F0%9D%95%A0%F0%9D%95%9F%F0%9D%95%96%F0%9D%95%9F%F0%9D%95%A5%F0%9D%95%A4">lightweight web components</a> [extra lightweight, vanilla js]</li>
+            <li><a href="https://github.com/smir-ant/reviews/issues">reviews via gh-issues</a> [yaml]</li>
+            <li><a href="https://github.com/smir-ant/wasm_parser?tab=readme-ov-file">gh-page wasm parser + gh-action build</a> [rust, yaml]</li>
+        </ul>
+    </main>
+    
+    <!-- inspired by https://albinodrought.com/ & https://maxday.dev/ -->
 </body>
 
 </html>
