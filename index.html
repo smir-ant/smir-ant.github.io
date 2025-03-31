@@ -58,8 +58,24 @@
         code {
             background-color: var(--color-codeBg);
             padding: 5px 10px;
+            margin-top: 30px;
             border-radius: 5px;
             display: block;
+        }
+
+        details {
+            margin-top: 12px;
+            padding-left: 25px;
+            & summary {
+                width: fit-content;
+                cursor: pointer;
+                & span {
+                    margin-left: 3px;
+                    padding: 2px 8px;
+                    border-radius: 5px;
+                    border: 1px solid color-mix(in srgb, #888, transparent 70%);
+                }
+            }
         }
 
         @media(prefers-color-scheme:light) {
@@ -85,28 +101,116 @@
 <body>
     <main>
         <h1><span>Smirnov Anton</span> <span>(smir-ant)</span></h1>
-        <p style="text-align: center;">RU | UTC+7</p>
+        <p style="text-align: center;"> RU | <span id="time"></span> <span style="opacity:0.3">(UTC+7)</span></p>
 
         <code><span class="grey">~$</span> <span class="green">whoami</span></code>
         <ul>
             <li>Teacher of python, web, rust | <a href="https://github.com/smir-ant/reviews/issues">reviews</a></li>
             <li>Middle python dev</li>
             <li>Lover of light and vanilla</li>
+            <li>Proud of my work cuz I put my soul into it</li>
+            <li>Higher technical and musical education</li>
             <li><a href="https://github.com/smir-ant">Github</a> | <a href="mailto:i@smir-ant.ru">Email</a> | <a href="https://www.codewars.com/users/smir-ant">Codewars</a></li>
         </ul>
 
-        <br>
+        <!-- <br> -->
         
-        <code><span class="grey">~$</span> <span class="green">ls code</span></code>
-        <ul>
-            <li><a href="https://github.com/smir-ant/spamFilter">filterSpam tgBot</a> [golang]</li>
-            <li><a href="https://smir-ant.github.io/PgEx/index.html">interactive PostgreSQL trainer (alpha)</a> [serverless, wasm, js]</li>
-            <li><a href="https://github.com/stars/smir-ant/lists/%F0%9D%95%8E%F0%9D%95%96%F0%9D%95%93-%E2%84%82%F0%9D%95%A0%F0%9D%95%9E%F0%9D%95%A1%F0%9D%95%A0%F0%9D%95%9F%F0%9D%95%96%F0%9D%95%9F%F0%9D%95%A5%F0%9D%95%A4">lightweight web components</a> [extra lightweight, vanilla js]</li>
-            <li><a href="https://github.com/smir-ant/reviews/issues">reviews via gh-issues</a> [yaml]</li>
-            <li><a href="https://github.com/smir-ant/wasm_parser?tab=readme-ov-file">gh-page wasm parser + gh-action build</a> [rust, yaml]</li>
-        </ul>
+        <code><span class="grey">~$</span> <span class="green">ls skills</span></code>
+        <details><summary><span>Python</span></summary>
+            <details><summary><span>Backend</span></summary><ul>
+                <li>Fastapi</li>
+                <li>Django</li>
+                <li>Flask</li>
+                <li>Alchemy</li>
+            </ul></details>
 
-        <br>
+            <details><summary><span>Data Science</span></summary><ul>
+                <li>Pandas</li>
+                <li>Polars</li>
+                <li>Matpotlib</li>
+                <li>Seaborn</li>
+                <li>Numpy</li>
+                <li>IPython</li>
+            </ul></details>
+
+            <details><summary><span>Parse</span></summary><ul>
+                <li>Selenium</li>
+                <li>Beautifulsoup</li>
+                <li>Lxml</li>
+                <li>Scrapy</li>
+            </ul></details>
+
+            <details><summary><span>Test</span></summary><ul>
+                <li>Pytest</li>
+                <li>Unittest</li>
+            </ul></details>
+
+            <details><summary><span>Bot</span></summary><ul>
+                <li>Pyrogram</li>
+                <li>Aiogram</li>
+            </ul></details>
+
+            <details><summary><span>Other</span></summary><ul>
+                <li>Tkinter</li>
+                <li>Qgis</li>
+            </ul></details>
+        </details>
+
+        <details><summary><span>Rust</span></summary>
+            <ul>
+                <li>Tauri</li>
+                <li>Tokio</li>
+                <li>Actix</li>
+                <li>Tera</li>
+            </ul>
+        </details>
+
+        <details><summary><span>Golang</span></summary>
+            <ul>
+                <li>Fiber</li>
+                <li>Gin</li>
+                <li>Gogram</li>
+            </ul>
+        </details>
+
+        <details><summary><span>DBMS</span></summary>
+            <ul>
+                <li>Postgre</li>
+                <li>Sqlite</li>
+                <li>Clickhouse</li>
+                <li>Mongo</li>
+                <li>Redis</li>
+            </ul>
+        </details>
+
+        <details><summary><span>Web</span></summary>
+            <details><summary><span>CSS</span></summary><ul>
+                <li>Modern Vanilla</li>
+                <li>Tailwind</li>
+                <li>Bootstrap</li>
+            </ul></details>
+            <ul>
+                <li>HTML</li>
+                <li>JS</li>
+                <li>NPM</li>
+                <li>WASM</li>
+                <li>JWT</li>
+            </ul>
+        </details>
+
+        <details><summary><span>Devops</span></summary>
+            <ul>
+                <li>Docker</li>
+                <li>Podman</li>
+                <li>Linux</li>
+                <li>Aster</li>
+                <li>Proxmox</li>
+            </ul>
+        </details>
+
+        <!-- <br>
+
+        <br> -->
 
         <code><span class="grey">~$</span> <span class="green">ls courses</span></code>
         <ul>
@@ -114,6 +218,22 @@
             <li><a href="https://smir-ant.github.io/PgEx/index.html">postgre</a> [frozen]</li>
         </ul>
     </main>
+
+    <script>
+        function displayTime() {
+        const options = {
+            timeZone: "Asia/Novosibirsk",
+            hour: "2-digit",
+            minute: "2-digit"
+        };
+        const time = new Date().toLocaleTimeString("ru-RU", options);
+        document.getElementById("time").textContent = time;
+        }
+
+        displayTime();
+
+        setInterval(displayTime, 6000);
+    </script>
     
     <!-- inspired by https://albinodrought.com/ & https://maxday.dev/ -->
 </body>
