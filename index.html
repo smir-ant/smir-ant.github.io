@@ -120,7 +120,7 @@
             <li>Lover of light and vanilla</li>
             <li>Proud of my work cuz I put my soul into it</li>
             <li>Higher technical and musical education</li>
-            <li><a href="https://github.com/smir-ant">Github</a> | <span id="email">Email</span> | <a href="https://www.codewars.com/users/smir-ant">Codewars</a></li>
+            <li><a href="https://github.com/smir-ant">Github</a> | <span title="i@smir-ant.ru" id="email">Email</span> | <a href="https://www.codewars.com/users/smir-ant">Codewars</a></li>
         </ul>
 
         <code><span class="grey">~$</span> <span class="green">ls skills</span></code>
@@ -159,6 +159,7 @@
             </ul></details>
 
             <details><summary><span>Other</span></summary><ul>
+                <li>Uv</li>
                 <li>Tkinter</li>
                 <li>Qgis</li>
             </ul></details>
@@ -241,15 +242,16 @@
 
     <!-- --- Email copy & notify  --- -->
     <style>
-        :root{--n-success-bgd:color-mix(in srgb, var(--color-green), transparent 20%);--n-inside:#fafbfe}@keyframes reveal-notification{0%{opacity:0;transform:translateY(-20px)}100%{opacity:1;transform:translateY(0)}}@keyframes hide-notification{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-20px)}}#notification-container{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:1000}.notification{color:var(--n-inside);padding:10px;border-radius:10px;margin-bottom:10px;display:flex;align-items:center;animation:reveal-notification .3s ease-out forwards;opacity:0;width:500px;box-sizing:border-box;overflow:hidden}.notification.remove{animation:hide-notification .3s ease-in forwards}.notification i{margin-right:5px}.notification.success{background-color:var(--n-success-bgd)}
+        :root{--n-success-bgd:color-mix(in srgb,var(--color-green),transparent 20%);--n-inside:#fafbfe}@keyframes reveal-notification{0%{opacity:0;transform:translateY(-20px)}100%{opacity:1;transform:translateY(0)}}@keyframes hide-notification{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-20px)}}#notification-container{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:1000}.notification{color:var(--n-inside);padding:10px 30px;border-radius:10px;margin-bottom:10px;display:flex;align-items:center;animation:reveal-notification .3s ease-out forwards;opacity:0;box-sizing:border-box;overflow:hidden}.notification.remove{animation:hide-notification .3s ease-in forwards}.notification i{margin-right:5px}.notification.success{background-color:var(--n-success-bgd)}
     </style>
-    <script> (function(){function showNotification(e,t="success",n=0){let i;let o;let c;if(typeof e==="string"){i=e;o=typeof t==="string"?t:"default";c=typeof t==="number"?t:n}else{const m=e;i=m.message;o=m.type||"default";c=m.delayBeforeHide!==undefined?m.delayBeforeHide:n}let a=document.getElementById("notification-container");if(!a){a=document.createElement("div");a.id="notification-container";document.body.appendChild(a)}const s=document.createElement("div");s.className=`notification success`;const d=document.createElement("i");d.className="success";s.appendChild(d);const l=document.createElement("div");l.className="notif-container";const f=document.createElement("div");f.textContent=i;f.className="notif";l.appendChild(f);s.appendChild(l);a.appendChild(s);if(c!==0){setTimeout(function(){closeNotification(s)},c)}}function closeNotification(e){if(e&&e.parentElement){e.classList.add("remove");setTimeout(function(){e.parentElement.removeChild(e)},300)}}window.showNotification=showNotification})();</script>    
+    <link rel="stylesheet" href="style.css">
+    <script>(function () { function showNotification(e, t = "success", n = 0) { let i; let o; let c; if (typeof e === "string") { i = e; o = typeof t === "string" ? t : "default"; c = typeof t === "number" ? t : n } else { const m = e; i = m.message; o = m.type || "default"; c = m.delayBeforeHide !== undefined ? m.delayBeforeHide : n } let a = document.getElementById("notification-container"); if (!a) { a = document.createElement("div"); a.id = "notification-container"; document.body.appendChild(a) } const s = document.createElement("div"); s.className = `notification success`; const l = document.createElement("div"); l.className = "notif-container"; const f = document.createElement("div"); f.textContent = i; f.className = "notif"; l.appendChild(f); s.appendChild(l); a.appendChild(s); if (c !== 0) { setTimeout(function () { closeNotification(s) }, c) } } function closeNotification(e) { if (e && e.parentElement) { e.classList.add("remove"); setTimeout(function () { e.parentElement.removeChild(e) }, 300) } } window.showNotification = showNotification })();</script>    
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const email = document.getElementById("email");
             email.addEventListener("click", () => {
                 navigator.clipboard.writeText("i@smir-ant.ru")
-                    .then(() => showNotification("Email copied to clipboard", "success", 2222))
+                    .then(() => showNotification("Email copied to clipboard", "success", 3000))
                     .catch(err => console.error("Copy failed:", err));
             });
         });
