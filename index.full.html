@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smir-ant</title>
+    <meta name="description" content="Личный сайт разработчика Смирнов Антон. Портфолио smir-ant. Как связаться и контакты.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://smir-ant.github.io/">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* чтобы dark reader не перекрашивал черный в серый, meh */
+        html {
+            background-color: var(--color-bg);
+        }
+        
+        body {
+            box-sizing: border-box;
+            font-family: monospace;
+            font-size: 16px;
+            color: var(--color-fg);
+        }
+
+        main {
+            width: fit-content;
+            margin: 100px auto;
+        }
+
+        a, a:visited {
+            color: var(--color-link);
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+            & span {
+                white-space: nowrap;
+            }
+        }
+
+        ul {
+            margin: 5px 0;
+            & li {
+                padding: 5px;
+            }
+        }
+
+        .green {
+            color: var(--color-green);
+        }
+
+        .grey {
+            color: #9E9E9E;
+        }
+
+        .weakOpacity {
+            opacity: 0.3;
+        }
+
+        code {
+            background-color: var(--color-codeBg);
+            padding: 5px 10px;
+            margin-top: 30px;
+            border-radius: 5px;
+            display: block;
+        }
+
+        details {
+            margin-top: 12px;
+            padding-left: 25px;
+            & summary {
+                width: fit-content;
+                cursor: pointer;
+                & span {
+                    margin-left: 3px;
+                    padding: 2px 8px;
+                    border-radius: 5px;
+                    border: 1px solid color-mix(in srgb, #888, transparent 70%);
+                }
+            }
+        }
+
+        /* общие цвета */
+        :root {
+            --color-green: #57C038;
+        }
+
+        #email {
+            color:var(--color-link);
+            cursor: pointer;
+        }
+
+        @media(prefers-color-scheme:light) {
+            :root {
+                --color-bg: #fdfdfd;
+                --color-fg: #222;
+                --color-link: #6c95db;
+                --color-codeBg: #ededed;
+            }
+        }
+
+        @media(prefers-color-scheme:dark) {
+            :root {
+                --color-bg: #181a1b;
+                --color-fg: #eee;
+                --color-link: #85b0fb;
+                --color-codeBg: #444;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1><span>Smirnov Anton</span> <span>(smir-ant)</span></h1>
+        <p style="text-align: center;"> RU | <span id="time"></span> <span class="weakOpacity">(UTC+7)</span></p>
+
+        <code><span class="grey">~$</span> <span class="green">whoami</span></code>
+        <ul>
+            <li>Teacher of python, web, rust | <a href="https://github.com/smir-ant/reviews/issues">reviews</a></li>
+            <li>Middle backend dev (Py+Go+Rs)</li>
+            <li>Lover of light and vanilla</li>
+            <li>Proud of my work cuz I put my soul into it</li>
+            <li>Higher technical and musical education</li>
+            <li><a href="https://github.com/smir-ant">Github</a> | <span title="i@smir-ant.ru" id="email">Email</span> | <a href="https://www.codewars.com/users/smir-ant">Codewars</a></li>
+        </ul>
+
+        <code><span class="grey">~$</span> <span class="green">ls skills</span></code>
+        <details><summary><span>Python</span></summary>
+            <details><summary><span>Backend</span></summary><ul>
+                <li>Fastapi & Django & Flask</li>
+                <li>Alchemy & Alembic</li>
+                <li>Bcrypt & Jose</li>
+                <li>Celery</li>
+            </ul></details>
+
+            <details><summary><span>Data Science</span></summary><ul>
+                <li>Pandas & Polars</li>
+                <li>Matpotlib & Seaborn</li>
+                <li>Tensorflow & Sklearn</li>
+                <li>Numpy</li>
+                <li>IPython</li>
+            </ul></details>
+
+            <details><summary><span>Parse</span></summary><ul>
+                <li>Selenium</li>
+                <li>Beautifulsoup</li>
+                <li>Lxml</li>
+                <li>Scrapy</li>
+            </ul></details>
+
+            <details><summary><span>Test</span></summary><ul>
+                <li>Pytest</li>
+                <li>Unittest</li>
+            </ul></details>
+
+            <details><summary><span>Bot</span></summary><ul>
+                <li>Pyrogram</li>
+                <li>Aiogram</li>
+            </ul></details>
+
+            <details><summary><span>Other</span></summary><ul>
+                <li>Uv</li>
+                <li>Tkinter</li>
+                <li>Qgis</li>
+            </ul></details>
+        </details>
+
+        <details><summary><span>Rust</span></summary>
+            <ul>
+                <li>[Runtime] Tokio</li>
+                <li>[Back] Actix</li>
+                <li>[Templating] Tera</li>
+                <li>[CLI] Clap</li>
+                <li>[GUI] Tauri</li>
+            </ul>
+        </details>
+
+        <details><summary><span>Golang</span></summary>
+            <ul>
+                <li>[HotReload] Air</li>
+                <li>[Back] Fiber</li>
+                <li>[Templating] Jet</li>
+                <li>[Logger] Zerolog</li>
+                <li>[Tg] Gogram</li>
+            </ul>
+        </details>
+
+        <details><summary><span>DBMS</span></summary>
+            <ul>
+                <li>Postgre</li>
+                <li>Sqlite</li>
+                <li>Clickhouse</li>
+                <li>Mongo</li>
+                <li>Redis</li>
+            </ul>
+        </details>
+
+        <details><summary><span>Web</span></summary>
+            <details><summary><span>CSS</span></summary><ul>
+                <li>Modern Vanilla</li>
+                <li>Tailwind</li>
+                <li>Bootstrap</li>
+            </ul></details>
+            <ul>
+                <li>HTML</li>
+                <li>HTMX</li>
+                <li>JS</li>
+                <li>WASM</li>
+                <li>JWT</li>
+            </ul>
+        </details>
+
+        <details><summary><span>Devops</span></summary>
+            <ul>
+                <li>Git & Fossil</li>
+                <li>Docker & Podman</li>
+                <li>Linux & Nix</li>
+                <li>Proxmox</li>
+                <li>Aster</li>
+            </ul>
+        </details>
+
+        <code><span class="grey">~$</span> <span class="green">ls courses</span></code>
+        <ul>
+            <li><span>rust <span class="weakOpacity"> [in progress]</span></span></li>
+            <li><a href="https://smir-ant.github.io/PgEx/index.html">postgre</a> <span class="weakOpacity"> [frozen]</span></li>
+            <!-- <li><span>podman + k8s <span class="weakOpacity"> [planned]</span></span></li> -->
+        </ul>
+    </main>
+
+    <script>
+        function displayTime() {
+        const options = {
+            timeZone: "Asia/Novosibirsk",
+            hour: "2-digit",
+            minute: "2-digit"
+        };
+        const time = new Date().toLocaleTimeString("ru-RU", options);
+        document.getElementById("time").textContent = time;
+        }
+
+        displayTime();
+
+        setInterval(displayTime, 6000);
+    </script>
+
+    <!-- --- Email copy & notify  --- -->
+    <style>
+        :root{--n-success-bgd:color-mix(in srgb,var(--color-green),transparent 20%);--n-inside:#fafbfe}@keyframes reveal-notification{0%{opacity:0;transform:translateY(-20px)}100%{opacity:1;transform:translateY(0)}}@keyframes hide-notification{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-20px)}}#notification-container{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:1000}.notification{color:var(--n-inside);padding:10px 30px;border-radius:10px;margin-bottom:10px;display:flex;align-items:center;animation:reveal-notification .3s ease-out forwards;opacity:0;box-sizing:border-box;overflow:hidden}.notification.remove{animation:hide-notification .3s ease-in forwards}.notification i{margin-right:5px}.notification.success{background-color:var(--n-success-bgd)}
+    </style>
+    <script>(function () { function showNotification(e, t = "success", n = 0) { let i; let o; let c; if (typeof e === "string") { i = e; o = typeof t === "string" ? t : "default"; c = typeof t === "number" ? t : n } else { const m = e; i = m.message; o = m.type || "default"; c = m.delayBeforeHide !== undefined ? m.delayBeforeHide : n } let a = document.getElementById("notification-container"); if (!a) { a = document.createElement("div"); a.id = "notification-container"; document.body.appendChild(a) } const s = document.createElement("div"); s.className = `notification success`; const l = document.createElement("div"); l.className = "notif-container"; const f = document.createElement("div"); f.textContent = i; f.className = "notif"; l.appendChild(f); s.appendChild(l); a.appendChild(s); if (c !== 0) { setTimeout(function () { closeNotification(s) }, c) } } function closeNotification(e) { if (e && e.parentElement) { e.classList.add("remove"); setTimeout(function () { e.parentElement.removeChild(e) }, 300) } } window.showNotification = showNotification })();</script>    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const email = document.getElementById("email");
+            email.addEventListener("click", () => {
+                navigator.clipboard.writeText("i@smir-ant.ru")
+                    .then(() => showNotification("Email copied to clipboard", "success", 3000))
+                    .catch(err => console.error("Copy failed:", err));
+            });
+        });
+    </script>  
+    <!-- inspired by https://albinodrought.com/ & https://maxday.dev/ -->
+    <!-- minified via https://go.tacodewolff.nl/minify -->
+</body>
+
+</html>
